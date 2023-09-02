@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Daisy UI -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 <body class="text-sm">
     
+        <header>
+            <section>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                        <img src="photos/Logo.png" alt="Site Logo" srcset="">
+                    </div>
+                    <div class="navbar-center">
+                        <a id="sort-by-view" class="btn btn-ghost normal-case text-xl">Blog Questions</a>
+                    </div>
+                    <div class="navbar-end">
+                        <a href="index.html"><button class="btn btn-ghost text-white bg-[#FF1F3D]">HOME</button></a>
+                    </div>
+                </div>
+            </section>
+    
+            <hr class="w-4/5 ml-32 border">
+        </header>
+
+    <main>
+        <section class="text-center mt-4 mb-4">
+            
+        
+        <h1 class="text-4xl font-bold">Topic</h1>
+
+        <ul>
+            <li class="text-2xl font-medium">Var, Let, Const</li>
+            <li class="text-2xl font-medium">Null & Undefiend</li>
+            <li class="text-2xl font-medium">Rest API</li>
+        </ul>
+
+
+        </section>
+        <section>
+            <h3 class="text-2xl font-medium ml-9 text-[#FF1F3D] "> # Var, Let, Const</h3>
+            
+            <hr class="border w-80">
+            <span class="text-2xl font-medium ml-9 ">VAR</span>
+            <p class="ml-9"> The var is a keyword that is used to declare a variable</p>
+
+            <span class="text-2xl font-medium ml-9 ">LET</span>
+            <p class="ml-9"> JavaScript let is a keyword used to declare variables in JavaScript that are block scoped. </p>
+
+            <span class="text-2xl font-medium ml-9 ">CONST</span>
+            <p class="ml-9"> Const is used for declaring constant variables – which are variables with values that cannot be changed. So such variables cannot be redeclared</p>
+        </section>
+
+        <!-- null and Undefiend -->
+        <!-- null and Undefiend -->
+        <section class="mt-32">
+            <h3 class="text-2xl font-medium ml-9 text-[#FF1F3D] "> # Null & Undefiend</h3>
+            
+            <hr class="border w-80">
+            <span class="text-2xl font-medium ml-9 ">Null</span>
+            <p class="ml-9">  Null in JavaScript means an empty value and is also a primitive type in JavaScript. </p>
+
+            <span class="text-2xl font-medium ml-9 ">Undefiend</span>
+            <p class="text-base font-medium ml-9 ">8 Ways to get Undefiend</p>
+            <p class="ml-9"> 
+                Undefined,  means the variable has been declared, but its value has not been assigned.
+                <br>
+                <br>
+                1. Variable that is not initialized <br>
+                2. function with no return <br>
+                3. Parameter that is not passed will be Undefiend <br>
+                4. If return has nothing  on the right side will return Undefiend <br>
+                5. Property that doesn't exist on an object will give you Undefiend <br>
+                6. Accessing array elements outside of the index range <br>
+                7. deleting an element inside an array <br>
+                8. Set a value directly to Undefiend <br>
+            </p>
+  </section>
+
+  <!-- rest API -->
+
+        <section class="mt-32">
+            <h3 class="text-2xl font-medium ml-9 text-[#FF1F3D]"> # Rest API</h3>
+            
+            <hr class="border w-80">
+            <span class="text-2xl font-medium ml-9 ">Rest API</span>
+            <p class="ml-9 mb-10">REST APIs are used to access and manipulate data using a common set of stateless operations. </p>
+
+  </section>
+
+  <div class="text-center mb-12">
+    <a href="index.html"><button class="btn btn-error btn-wide">Back To Home</button></a>
+  </div>
+    </main>
 </body>
 </html>

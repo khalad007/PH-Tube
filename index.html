@@ -8,6 +8,11 @@
     <!-- Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <style>
+        #no-d-found-img, #no-para-found {
+            display: hidden;
+        }
+    </style> -->
     <title>PH Tube</title>
 </head>
 
@@ -16,13 +21,13 @@
         <section>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
-                    <img src="photos/Logo.png" alt="Site Logo" srcset="">
+                    <img class="lg:ml-7" src="photos/Logo.png" alt="Site Logo" srcset="">
                 </div>
                 <div class="navbar-center">
                     <a id="sort-by-view" class="btn btn-ghost normal-case text-xl">Sort By View</a>
                 </div>
                 <div class="navbar-end">
-                    <button class="btn btn-ghost">BLOG</button>
+                    <a href="blog.html"><button class="btn btn-ghost text-white bg-[#FF1F3D] lg:mr-7 md:mr-28">BLOG</button></a>
                 </div>
             </div>
         </section>
@@ -31,10 +36,12 @@
     </header>
 
     <main>
+
+
         <!-- all catagory button section  -->
 
         <section>
-            <div id="catagory-container" class="grid grid-cols-4 mt-5 mb-8 lg:mx-80">
+            <div id="catagory-container" class=" grid sm:grid-cols-4  md:grid-cols-2 lg:grid-cols-4 mt-5 mb-8 lg:mx-80">
 
 
             </div>
@@ -43,10 +50,16 @@
         <!-- card section  -->
 
         <section>
-            <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2" id="video-container">
+            <div class=" grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2" id="video-container">
 
             </div>
         </section>
+        
+        <!-- no data found  -->
+
+            <img id="no-d-found-img" class="hidden ml-[38%] md:ml-[40%] lg:ml-[45%]" src="photos/Icon.png" alt="">
+            <p id="no-para-found" class="hidden text-2xl font-semibold text-center">Oops!! Sorry, There is <br>no content here</p>
+
     </main>
 
     <footer>

@@ -39,7 +39,7 @@ const displayCatagory = catagory1 => {
 
         // set innerhtml
         catagoryCard.innerHTML = `
-        <button onclick="handleLoadCategories('${catagory2.category_id}')" class="h-10 rounded-lg w-36 bg-gray-300">${catagory2.category}</button>
+        <button onclick="handleLoadCategories('${catagory2.category_id}')" class=" h-10 rounded-lg lg:w-36 w-24 bg-gray-300">${catagory2.category}</button>
         `;
 
         // appendChild 
@@ -53,15 +53,31 @@ const handleLoadCategories = async (catagory2) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${catagory2}`);
     const data = await res.json();
 
-    console.log(data.data);
+    console.log(data.data.length);
+    
+    // no data found
+    if(data.data.length === 0){
+     
+
+        document.getElementById("no-d-found-img").style.display = "block";
+        document.getElementById("no-para-found").style.display = "block";
+    }else{
+        document.getElementById('no-d-found-img').style.display = "none";
+        document.getElementById('no-para-found').style.display = "none";
+    }
+
+
+    // no data found ended .....................................
     const videoContainer = document.getElementById('video-container');
     videoContainer.innerHTML = "";
 
     data.data.forEach((details) => {
         console.log(details);
+        // create div 
         const div = document.createElement('div');
-        div.classList = `mb-10 ml-6 card w-72 bg-gray-100 shadow-xl`;
-          // 3 inner html set
+
+        div.classList = `md:ml-16 md:w-60 mb-10 lg:ml-6 card lg:w-72 bg-gray-100 shadow-xl`;
+          //  inner html set
           div.innerHTML = `
           <figure><img  class="h-52" src="${details.thumbnail}" alt="Shoes" /></figure>
               <div class="card-body flex-row items-center">
@@ -75,6 +91,7 @@ const handleLoadCategories = async (catagory2) => {
               <h5 class="ml-[75px] text-xs mb-3 pt-3">${details.others.views} views</h5>
           `;
           videoContainer.appendChild(div);
+ 
 
     })
     
